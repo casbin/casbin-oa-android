@@ -1,0 +1,3 @@
+rootProject.name = "CasbinOA"
+include ':app'
+include ':app:casdoor'
