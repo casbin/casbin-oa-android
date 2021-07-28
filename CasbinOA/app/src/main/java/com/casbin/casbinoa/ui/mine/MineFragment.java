@@ -22,6 +22,8 @@ public class MineFragment extends Fragment {
     private MineViewModel mineViewModel;
     private FragmentMineBinding binding;
 
+    public static final String USER_TOKEN = "com.casbin.casbinoa.TOKEN";
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         mineViewModel =

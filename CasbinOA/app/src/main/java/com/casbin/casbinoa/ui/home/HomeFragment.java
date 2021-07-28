@@ -1,5 +1,7 @@
 package com.casbin.casbinoa.ui.home;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.casbin.casbinoa.R;
 import com.casbin.casbinoa.databinding.FragmentHomeBinding;
+import com.casbin.casdoor.CasdoorLoginActivity;
+import com.casbin.casdoor.CasdoorUserToken;
 
 public class HomeFragment extends Fragment {
 
@@ -29,12 +33,10 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+        String val = CasdoorUserToken.GetUserToken(getActivity());
+        textView.setText(val);
+
         return root;
     }
 
