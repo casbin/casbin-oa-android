@@ -16,4 +16,12 @@ public class CasdoorUserToken {
             return "";
         }
     }
+
+    static void SetUserToken (FragmentActivity activity, String userToken) {
+        SharedPreferences sharedPreferences = activity.getSharedPreferences(
+                "user_token", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("user_token", userToken);
+        editor.apply();
+    }
 }
