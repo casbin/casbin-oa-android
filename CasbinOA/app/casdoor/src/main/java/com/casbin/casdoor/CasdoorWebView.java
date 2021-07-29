@@ -8,7 +8,14 @@ import android.webkit.WebViewClient;
 
 import androidx.fragment.app.FragmentActivity;
 
+import java.io.IOException;
 import java.util.Map;
+
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 class CasdoorWebView extends WebViewClient {
     FragmentActivity activity;
@@ -49,8 +56,17 @@ class CasdoorWebView extends WebViewClient {
 
         if (url.contains("code=")) {
             String paras = url.split("\\?")[1];
+            // get the code from url
             String code = paras.split("&")[0].split("=")[1];
-            CasdoorUserToken.SetUserToken(activity, code);
+
+
+            // exchange code for token
+            try {
+                CasdoorBackend.SetAccessToken(activity, code);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
             activity.finish();
         }
     }
