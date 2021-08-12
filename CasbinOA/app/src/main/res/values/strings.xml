@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CasbinOA</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="LoginBtn">Click Me To Login</string>
+    <string name="title_mine">Mine</string>
+</resources>
