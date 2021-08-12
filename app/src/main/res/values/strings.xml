@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">CasbinOA</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="LoginBtn">Click Me To Login</string>
+    <string name="LogoutBtn">Click Me To Logout</string>
+    <string name="login_notification">Login Page</string>
+    <string name="title_mine">Mine</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    String Organization;
+    String UserName;
+    String Type;
+
+    String Name;
+    String Avatar;
+    String Email;
+    String Phone;
+
+    <!-- UserInfo table -->
+    <string name="userInfo_title">User Info</string>
+
+    <string name="userInfo_name">Name</string>
+    <string name="userInfo_avatar">Avatar</string>
+    <string name="userInfo_email">Email</string>
+    <string name="userInfo_phone">Phone</string>
+
+    <string name="userInfo_organization">Organization</string>
+    <string name="userInfo_userName">UserName</string>
+    <string name="userInfo_type">Type</string>
+
+    <string name="item_user_name">Name</string>
+    <string name="item_user_phone">Phone</string>
+    <string name="item_user_email">Email</string>
+</resources>
